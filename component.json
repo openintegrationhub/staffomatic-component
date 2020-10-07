@@ -1,0 +1,87 @@
+{
+  "title": "Staffomatic",
+  "description": "Staffomatic OIH Connector",
+  "docsUrl": "https://github.com/openintegrationhub/staffomatic",
+  "buildType": "docker",
+  "credentials": {
+    "fields": {
+      "username": {
+        "label": "Your username",
+        "required": true,
+        "viewClass": "TextFieldView",
+        "note": "Use your username registerd in <b>Staffomatic</b>",
+        "placeholder": "youremail@mail.com"
+      },
+      "password": {
+        "label": "Your password",
+        "required": true,
+        "viewClass": "PasswordFieldView",
+        "note": "Use your password for <b>Staffomatic</b>"
+      },
+      "API_KEY": {
+        "label": "API_KEY",
+        "required": true,
+        "viewClass": "PasswordFieldView",
+        "note": "Your Staffomatic API_KEY"
+      },
+      "applicationUid": {
+        "label": "Application uid",
+        "required": false,
+        "viewClass": "TextFieldView",
+        "note": "Application uid",
+        "placeholder": "application123456"
+      },
+      "schema": {
+        "label": "Schema",
+        "required": false,
+        "viewClass": "TextFieldView",
+        "note": "Schema from Meta Data Repository",
+        "placeholder": "address"
+      },
+      "domainId": {
+        "label": "Domain Id",
+        "required": false,
+        "viewClass": "TextFieldView",
+        "note": "Domain Id from Meta Data Repository",
+        "placeholder": "5d3031a20cbe7c00115c7d8f"
+      }
+    }
+  },
+  "triggers": {
+    "getUsersPolling": {
+      "title": "Fetch new and updated persons(getPersons - Polling)",
+      "description": "Get Staffomatic persons which have recently been modified or created",
+      "type": "polling",
+      "main": "./lib/triggers/getUsersPolling.js",
+      "metadata": {
+        "out": "./lib/schemas/getUsers.out.json"
+      }
+    },
+    "getEventsPolling": {
+      "title": "Fetch new and updated organizations(getOrganizations- Polling)",
+      "description": "Get Staffomatic organizations which have recently been modified or created",
+      "type": "polling",
+      "main": "./lib/triggers/getEventsPolling.js",
+      "metadata": {
+        "out": "./lib/schemas/getEvents.out.json"
+      }
+    }
+  },
+  "actions": {
+    "upsertPerson": {
+      "title": "Upsert a person in Staffomatic",
+      "main": "./lib/actions/upsertPerson.js",
+      "metadata": {
+        "in": "./lib/schemas/upsertPerson.in.json",
+        "out": "./lib/schemas/upsertPerson.out.json"
+      }
+    },
+    "upsertOrganization": {
+      "main": "./lib/actions/upsertOrganization.js",
+      "title": "Upsert an organization  in Staffomatic",
+      "metadata": {
+        "in": "./lib/schemas/upsertOrganization.in.json"
+      }
+    }
+  }
+}

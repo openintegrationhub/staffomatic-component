@@ -1,0 +1,87 @@
+{
+    "type": "object",
+    "properties": {
+        "activity_id": {
+            "type": "number"
+        },
+        "activity_subject": {
+            "type": "string"
+        },
+        "activity_done": {
+            "type": "string"
+        },
+        "activity_type": {
+            "type": "string"
+        },
+        "deal_id": {
+            "type": "string"
+        },
+        "deal_title": {
+            "type": "string"
+        },
+        "deal_value": {
+            "type": "string"
+        },
+        "deal_currency": {
+            "type": "string"
+        },
+        "deal_stage_id": {
+            "type": "string"
+        },
+        "deal_status": {
+            "type": "string"
+        },
+        "deal_lost_reason": {
+            "type": "string"
+        },
+        "deal_visible_to": {
+            "type": "string"
+        },
+        "deal_add_time": {
+            "type": "string"
+        },
+        "person_id": {
+            "type": "string"
+        },
+        "person_name": {
+            "type": "string",
+            "required": true
+        },
+        "person_email": {
+            "type": "string"
+        },
+        "person_phone": {
+            "type": "string"
+        },
+        "person_visible_to": {
+            "type": "string"
+        },
+        "person_add_time": {
+            "type": "string"
+        },
+        "org_id": {
+            "type": "string"
+        },
+        "org_name": {
+            "type": "string"
+        },
+        "org_visible_to": {
+            "type": "string"
+        },
+        "org_add_time": {
+            "type": "string"
+        },
+        "note_id": {
+            "type": "string"
+        },
+        "note_content": {
+            "type": "string"
+        },
+        "user_id": {
+            "type": "string"
+        },
+        "owner_id": {
+            "type": "string"
+        }
+    }
+}
