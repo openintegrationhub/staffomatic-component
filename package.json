@@ -24,7 +24,7 @@
   "dependencies": {
     "@openintegrationhub/ferryman": "^1.0.1",
     "co": "4.6.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.1",
     "q": "^1.5.1",
     "request": "^2.88.0",
     "request-promise": "4.1.1",
