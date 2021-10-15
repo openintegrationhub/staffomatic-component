@@ -17,12 +17,8 @@
     "connector",
     "OIH"
   ],
-  "engines": {
-    "node": "12.18.3",
-    "npm": ">=5.4"
-  },
   "dependencies": {
-    "@openintegrationhub/ferryman": "^1.0.5",
+    "@openintegrationhub/ferryman": "1.6.2",
     "co": "4.6.0",
     "moment": "^2.29.1",
     "q": "^1.5.1",
@@ -31,17 +27,12 @@
     "uuid": "^8.2.0"
   },
   "devDependencies": {
-    "chai": "^4.1.2",
-    "eslint": "^5.3.0",
+    "eslint": "7.26.0",
     "eslint-config-airbnb-base": "13.1.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-json": "^1.2.1",
-    "eslint-plugin-mocha": "^5.2.0",
-    "jenkins-mocha": "^8.0.0",
-    "mocha": "^8.1.1",
-    "nock": "^9.6.1",
-    "nyc": "^15.1.0",
-    "supertest": "^3.3.0"
+    "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-jest": "22.1.0",
+    "eslint-plugin-json": "1.4.0",
+    "eslint-plugin-mocha": "5.2.0"  
   },
   "author": "Ioannis Lafiotis",
   "repository": {
