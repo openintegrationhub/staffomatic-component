@@ -77,19 +77,25 @@
     }
   },
   "actions": {
-    "upsertPerson": {
-      "title": "Upsert a person in Staffomatic",
-      "main": "./lib/actions/upsertPerson.js",
+    "createUser": {
+      "title": "Create a user in Staffomatic",
+      "main": "./lib/actions/createUser.js",
       "metadata": {
-        "in": "./lib/schemas/upsertPerson.in.json",
-        "out": "./lib/schemas/upsertPerson.out.json"
+        "in": "./lib/schemas/createUser.in.json"
       }
     },
-    "upsertOrganization": {
-      "main": "./lib/actions/upsertOrganization.js",
-      "title": "Upsert an organization  in Staffomatic",
+    "createEvent": {
+      "title": "Create an event in Staffomatic",
+      "main": "./lib/actions/createEvent.js",
       "metadata": {
-        "in": "./lib/schemas/upsertOrganization.in.json"
+        "in": "./lib/schemas/createEvent.in.json"
+      }
+    },
+    "createAbsence": {
+      "title": "Create an absence in Staffomatic",
+      "main": "./lib/actions/createAbsence.js",
+      "metadata": {
+        "in": "./lib/schemas/createAbsence.in.json"
       }
     }
   }
