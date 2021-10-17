@@ -1,87 +1,37 @@
 {
-    "type": "object",
-    "properties": {
-        "activity_id": {
-            "type": "number"
-        },
-        "activity_subject": {
-            "type": "string"
-        },
-        "activity_done": {
-            "type": "string"
-        },
-        "activity_type": {
-            "type": "string"
-        },
-        "deal_id": {
-            "type": "string"
-        },
-        "deal_title": {
-            "type": "string"
-        },
-        "deal_value": {
-            "type": "string"
-        },
-        "deal_currency": {
-            "type": "string"
-        },
-        "deal_stage_id": {
-            "type": "string"
-        },
-        "deal_status": {
-            "type": "string"
-        },
-        "deal_lost_reason": {
-            "type": "string"
-        },
-        "deal_visible_to": {
-            "type": "string"
-        },
-        "deal_add_time": {
-            "type": "string"
-        },
-        "person_id": {
-            "type": "string"
-        },
-        "person_name": {
-            "type": "string",
-            "required": true
-        },
-        "person_email": {
-            "type": "string"
-        },
-        "person_phone": {
-            "type": "string"
-        },
-        "person_visible_to": {
-            "type": "string"
-        },
-        "person_add_time": {
-            "type": "string"
-        },
-        "org_id": {
-            "type": "string"
-        },
-        "org_name": {
-            "type": "string"
-        },
-        "org_visible_to": {
-            "type": "string"
-        },
-        "org_add_time": {
-            "type": "string"
-        },
-        "note_id": {
-            "type": "string"
-        },
-        "note_content": {
-            "type": "string"
-        },
-        "user_id": {
-            "type": "string"
-        },
-        "owner_id": {
-            "type": "string"
-        }
+  "type": "object",
+  "properties": {
+    "starts_at": {
+      "description": "The time at which this resource was created.",
+      "type": "string",
+      "format": "date-time",
+      "readOnly": true,
+      "example": "2020-09-25T15:49:06+02:00"
+    },
+    "ends_at": {
+      "description": "The time at which this resource was updated.",
+      "type": "string",
+      "format": "date-time",
+      "readOnly": true,
+      "example": "2020-09-25T15:49:06+02:00"
+    },
+    "applicant_id": {
+      "type": "number",
+      "example": 617477
+    },
+    "absence_type_id": {
+      "type": "number",
+      "example": 617477
+    },
+    "paid": { "type": "boolean", "example": true },
+    "vacation": { "type": "boolean", "example": true },
+    "include_weekends": { "type": "boolean", "example": true },
+    "all_day": { "type": "boolean", "example": true },
+    "commentable": { "type": "boolean", "example": true },
+    "attachable": { "type": "boolean", "example": true },
+    "justification": {
+      "type": "string",
+      "example": "approved"
     }
+  }
 }
