@@ -49,7 +49,7 @@
   },
   "triggers": {
     "getUsersPolling": {
-      "title": "Fetch new and updated persons(getPersons - Polling)",
+      "title": "Fetch new and updated persons (getPersons - Polling)",
       "description": "Get Staffomatic persons which have recently been modified or created",
       "type": "polling",
       "main": "./lib/triggers/getUsersPolling.js",
@@ -58,12 +58,21 @@
       }
     },
     "getEventsPolling": {
-      "title": "Fetch new and updated organizations(getOrganizations- Polling)",
+      "title": "Fetch new and updated events (getEvents- Polling)",
       "description": "Get Staffomatic organizations which have recently been modified or created",
       "type": "polling",
       "main": "./lib/triggers/getEventsPolling.js",
       "metadata": {
         "out": "./lib/schemas/getEvents.out.json"
+      }
+    },
+    "getAbsencePolling": {
+      "title": "Fetch new and updated absence (getAbsence- Polling)",
+      "description": "Get Staffomatic absences which have recently been modified or created",
+      "type": "polling",
+      "main": "./lib/triggers/getAbsencesPolling.js",
+      "metadata": {
+        "out": "./lib/schemas/getAbsences.out.json"
       }
     }
   },

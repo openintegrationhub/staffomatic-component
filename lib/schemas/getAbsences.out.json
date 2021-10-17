@@ -1,177 +1,100 @@
 {
   "type": "object",
   "properties": {
-    "uid": {
+    "created_at": {
+      "description": "The time at which this resource was created.",
       "type": "string",
-      "required": true,
-      "title": "Uid",
-      "note": "Organization's uid",
-      "placeholder": "3gbdq1jtsvxjot"
+      "format": "date-time",
+      "readOnly": true,
+      "example": "2020-09-25T15:49:06+02:00"
     },
-    "name": {
+    "updated_at": {
+      "description": "The time at which this resource was updated.",
       "type": "string",
-      "required": true,
-      "title": "Name",
-      "note": "Organization's name",
-      "placeholder": "Company Ltd."
+      "format": "date-time",
+      "readOnly": true,
+      "example": "2020-09-25T15:49:06+02:00"
     },
-    "addresses": {
-      "type": "array",
-      "required": true,
-      "title": "Addresses",
-      "note": "Organizations's addresses",
-      "items": {
-        "type": "object",
-        "properties": {
-          "uid": {
-            "type": "string",
-            "example": "3gbbu1jmkewc87"
-          },
-          "street": {
-            "type": "string",
-            "example": "Wendenstr"
-          },
-          "streetNumber": {
-            "type": "string",
-            "example": "120"
-          },
-          "unit": {
-            "type": "string",
-            "example": "Hammerbrook"
-          },
-          "zipcode": {
-            "type": "string",
-            "example": "20537"
-          },
-          "city": {
-            "type": "string",
-            "example": "Hamburg"
-          },
-          "district": {
-            "type": "string",
-            "example": "HH-Hamburg"
-          },
-          "region": {
-            "type": "string",
-            "example": "Hamburg"
-          },
-          "country": {
-            "type": "string",
-            "example": "Germany"
-          },
-          "countryCode": {
-            "type": "string",
-            "example": "0049"
-          },
-          "primaryContact": {
-            "type": "string",
-            "example": "true"
-          },
-          "description": {
-            "type": "string",
-            "example": "Business Address"
-          }
-        }
-      }
+    "id": {
+      "type": "number",
+      "example": 617477
     },
-    "categories": {
-      "type": "array",
-      "required": true,
-      "title": "Categories",
-      "note": "Organizations's categories",
-      "items": {
-        "type": "object",
-        "properties": {
-          "uid": {
-            "type": "string",
-            "example": "yj5rl1jt7j9ce2"
-          },
-          "label": {
-            "type": "string",
-            "example": "Customers"
-          }
-        }
-      }
+    "starts_at": {
+      "description": "The time at which this resource was created.",
+      "type": "string",
+      "format": "date-time",
+      "readOnly": true,
+      "example": "2020-09-25T15:49:06+02:00"
     },
-    "relations": {
-      "type": "array",
-      "required": true,
-      "title": "Relations",
-      "note": "Organizations's relations",
-      "items": {
-        "type": "object",
-        "properties": {
-          "uid": {
-            "type": "string",
-            "example": "yj5pv1jtva0k0t"
-          },
-          "type": {
-            "type": "string",
-            "example": "OrganizationToOrganization"
-          },
-          "typeRef": {
-            "type": "string",
-            "example": "yj5rl1jt01l18b"
-          },
-          "label": {
-            "type": "string",
-            "example": "Partner"
-          },
-          "uids": {
-            "type": "array",
-            "items": {}
-          },
-          "partner": {
-            "type": "object",
-            "properties": {
-              "kind": {
-                "type": "string",
-                "example": "Organization"
-              },
-              "name": {
-                "type": "string",
-                "example": "Partner Company Ltd."
-              },
-              "uid": {
-                "type": "string",
-                "example": "3gbdq1jtss29zz"
-              },
-              "addresses": {
-                "type": "array",
-                "items": {}
-              }
-            }
-          }
-        }
-      }
+    "ends_at": {
+      "description": "The time at which this resource was updated.",
+      "type": "string",
+      "format": "date-time",
+      "readOnly": true,
+      "example": "2020-09-25T15:49:06+02:00"
     },
-    "contactData": {
+    "processed_at": {
+      "description": "The time at which this resource was updated.",
+      "type": "string",
+      "format": "date-time",
+      "readOnly": true,
+      "example": "2020-09-25T15:49:06+02:00"
+    },
+    "paid": { "type": "boolean", "example": true },
+    "vacation": { "type": "boolean", "example": true },
+    "include_weekends": { "type": "boolean", "example": true },
+    "commentable": { "type": "boolean", "example": true },
+    "attachable": { "type": "boolean", "example": true },
+    "all_day": { "type": "boolean", "example": true },
+
+    "state": {
+      "type": "string",
+      "example": "approved"
+    },
+    "comments_count": {
+      "type": "number",
+      "example": 617477
+    },
+    "attachments_count": {
+      "type": "number",
+      "example": 617477
+    },
+
+    "justification": {
+      "type": "string",
+      "example": "approved"
+    },
+    "last_updated_by_id": {
+      "type": "number",
+      "example": 617477
+    },
+    "adjusted_duration": {
+      "type": "number",
+      "example": 617477
+    },
+    "comment_ids": {
       "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "uid": {
-            "type": "string",
-            "example": "3gbdq1jtss6kc4"
-          },
-          "description": {
-            "type": "string",
-            "example": "Support email"
-          },
-          "value": {
-            "type": "string",
-            "example": "support@partnercompany.com"
-          },
-          "type": {
-            "type": "string",
-            "example": "email"
-          },
-          "categories": {
-            "type": "array",
-            "items": {}
-          }
-        }
-      }
+      "items": { "type": "number" }
+    },
+    "attachment_ids": {
+      "type": "array",
+      "items": { "type": "number" }
+    },
+    "applicant_id": {
+      "type": "number",
+      "example": 617477
+    },
+    "handler_id": {
+      "type": "number",
+      "example": 617477
+    },
+    "location_id": {
+      "type": "number",
+      "example": 617477
+    },
+    "absence_type_id": {
+      "type": "number",
+      "example": 617477
     }
   }
 }
