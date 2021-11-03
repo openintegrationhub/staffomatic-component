@@ -1,7 +1,9 @@
 {
     "type": "object",
     "properties": {
-        
+      "requestBody": {
+        "type": "object",
+        "properties": {
             "first_name": {
                 "description": "The firstname of the user task list.",
                 "type": "string",
@@ -43,6 +45,6 @@
               },  
             "changes":{"type":"object"}
           }
-        
-    
+      }
+    }
 }

@@ -1,6 +1,9 @@
 {
   "type": "object",
   "properties": {
+    "requestBody": {
+      "type": "object",
+      "properties": {
     "starts_at": {
       "description": "The time at which this resource was created.",
       "type": "string",
@@ -34,4 +37,6 @@
       "example": "approved"
     }
   }
+}
+}
 }
