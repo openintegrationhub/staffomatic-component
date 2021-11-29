@@ -18,7 +18,7 @@
     "OIH"
   ],
   "dependencies": {
-    "@openintegrationhub/ferryman": "1.6.2",
+    "@openintegrationhub/ferryman": "2.0.1",
     "co": "4.6.0",
     "moment": "^2.29.1",
     "q": "^1.5.1",
