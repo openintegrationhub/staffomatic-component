@@ -18,11 +18,9 @@
         "viewClass": "PasswordFieldView",
         "note": "Use your password for <b>Staffomatic</b>"
       },
-      "API_KEY": {
-        "label": "API_KEY",
-        "required": true,
-        "viewClass": "PasswordFieldView",
-        "note": "Your Staffomatic API_KEY"
+      "auth_BearerAuth": {
+        "label": "Bearer (undefined)",
+        "viewClass": "TextFieldView"
       },
       "applicationUid": {
         "label": "Application uid",
