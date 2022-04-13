@@ -1,0 +1,11 @@
+{
+  "created_at": "2012-09-17T23:03:55+02:00",
+  "updated_at": "2013-08-26T01:52:10+02:00",
+  "id": 1,
+  "visibility": "staff",
+  "name": "Urlaub",
+  "color": "d9be50",
+  "user_selectable": true,
+  "location_id": 64,
+  "include_weekends": true
+}

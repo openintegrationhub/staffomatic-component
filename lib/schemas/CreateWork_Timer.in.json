@@ -1,0 +1,21 @@
+{
+  "created_at": "2018-08-06T13:13:21+02:00",
+  "updated_at": "2018-08-06T13:14:57+02:00",
+  "id": 118976,
+  "user_id": 1,
+  "location_id": null,
+  "updated_by_id": 1,
+  "created_by_id": 1,
+  "state": "running",
+  "duration": 0,
+  "break_duration": 100,
+  "net_duration": 100,
+  "starts_at": "2018-08-06T13:15:00+02:00",
+  "ends_at": null,
+  "application_starts_at": null,
+  "application_ends_at": null,
+  "application_intermission": null,
+  "work_report_id": 30077,
+  "application_id": null,
+  "device_type": "terminal"
+}

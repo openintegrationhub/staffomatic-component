@@ -1,0 +1,30 @@
+{
+  "properties": [
+    {
+      "created_at": "2012-03-13T12:20:13+01:00",
+      "updated_at": "2013-07-16T00:56:16+02:00",
+      "id": 1699,
+      "creator_id": 493,
+      "schedule_id": 118,
+      "state": "draft",
+      "template": null,
+      "bop": "2012-02-20",
+      "eop": "2012-02-26",
+      "deadline": "2012-02-16T00:00:00+01:00",
+      "coverage_percentage": 0,
+      "schedule_changes_count": 0,
+      "first_day_of_week": 1,
+      "slot_minutes": 30,
+      "min_time": 0,
+      "max_time": 24,
+      "default_view": "agendaWeek",
+      "default_event_minutes": 240,
+      "show_event_header": false,
+      "applications_visible": true,
+      "assignments_visible": false,
+      "swap_shifts": true,
+      "notes_visible": false,
+      "allow_self_assign": false
+    }
+  ]
+}

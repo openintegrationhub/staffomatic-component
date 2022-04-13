@@ -1,0 +1,12 @@
+{
+  "properties": {
+    "created_at": "2014-10-07T11:02:51+02:00",
+    "updated_at": "2015-02-10T15:21:54+01:00",
+    "id": 149328,
+    "field_type": "string",
+    "name": "fun factor",
+    "field_options": [],
+    "value": "100%",
+    "position": null
+  }
+}
