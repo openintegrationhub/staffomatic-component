@@ -1,0 +1,43 @@
+{
+  "properties": {
+    "requestBody": {
+      "type": "object",
+      "properties": {
+        "created_at": {
+          "type": "string",
+          "format": "date-time",
+          "example": "2012-12-06T09:21:11+01:00"
+        },
+        "updated_at": {
+          "type": "string",
+          "format": "date-time",
+          "example": "2012-12-06T09:21:11+01:00"
+        },
+        "id": { "type": "integer", "format": "int32", "example": "1" },
+        "starts_at": {
+          "type": "string",
+          "format": "date-time",
+          "example": "2012-01-01T00:00:00+01:00"
+        },
+        "ends_at": {
+          "type": "string",
+          "format": "date-time",
+          "example": "2012-01-01T00:00:00+01:00"
+        },
+        "name": { "type": "string", "example": "Neujahrstag" },
+        "description": { "type": "string", "format": "nullable" },
+        "color": { "type": "string", "example": "d9be50" },
+        "public_holiday": { "type": "boolean" },
+        "show_in_schedule": { "type": "boolean" },
+        "allow_absences": { "type": "boolean" },
+        "all_day": { "type": "boolean" },
+        "location_id": {
+          "type": "integer",
+          "format": "int32",
+          "example": "64"
+        },
+        "creator_id": { "type": "integer", "format": "int32", "example": "493" }
+      }
+    }
+  }
+}

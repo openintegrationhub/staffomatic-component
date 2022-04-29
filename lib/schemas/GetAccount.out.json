@@ -1,0 +1,72 @@
+{
+  "type": "object",
+  "properties": {
+    "created_at": {
+      "type": "string",
+      "format": "date-time",
+      "example": "2011-11-10T15:10:13+01:00"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time",
+      "example": "2014-12-01T12:16:35+01:00"
+    },
+    "id": { "type": "integer", "format": "int32", "example": "159" },
+    "name": { "type": "string", "example": "Research" },
+    "subdomain": { "type": "string", "example": "demo" },
+    "domain": { "type": "string", "example": "staffomatic.com" },
+    "time_zone": { "type": "string", "example": "Europe/Berlin" },
+    "locations_count": { "type": "integer", "format": "int32", "example": "8" },
+    "active_users_count": {
+      "type": "integer",
+      "format": "int32",
+      "example": "15"
+    },
+    "shift_categories_count": {
+      "type": "integer",
+      "format": "int32",
+      "example": "32"
+    },
+    "assigments_visible_for_staff": { "type": "boolean" },
+    "first_day_of_week": {
+      "type": "integer",
+      "format": "int32",
+      "example": "0"
+    },
+    "format_24_hour_time": { "type": "boolean" },
+    "date_format": { "type": "string", "example": "%d.%m.%Y" },
+    "reports_editable_for_staff": { "type": "boolean" },
+    "logo": {
+      "type": "string",
+      "example": "https://api.staffomaticapp.com/system/logos/159/api/staffomatic.png?1413354869"
+    },
+    "locale": { "type": "string", "example": "de" },
+    "plan_id": { "type": "integer", "format": "int32", "example": "4" },
+    "lockdown_reason": { "type": "string", "example": "" },
+    "dunning_level": { "type": "string", "example": "dunning_level_3" },
+    "trial_until": {
+      "type": "string",
+      "format": "date",
+      "example": "2014-10-08"
+    },
+    "billing_subscribed": { "type": "boolean" },
+    "account_owner_id": {
+      "type": "integer",
+      "format": "int32",
+      "example": "493"
+    },
+    "billing_subscribed_at": { "type": "string", "format": "nullable" },
+    "customer_number": { "type": "string", "example": "6015949" },
+    "subscription_id": {
+      "type": "integer",
+      "format": "int32",
+      "example": "56626"
+    },
+    "customer_id": {
+      "type": "integer",
+      "format": "int32",
+      "example": "402246"
+    },
+    "url": { "type": "string", "example": "https://demo.staffomatic.com" }
+  }
+}

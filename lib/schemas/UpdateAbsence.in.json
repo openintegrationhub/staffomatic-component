@@ -1,0 +1,85 @@
+{
+  "properties": {
+    "requestBody": {
+      "type": "object",
+      "properties": {
+        "created_at": {
+          "type": "string",
+          "format": "date-time",
+          "example": "2014-11-17T19:36:19+01:00"
+        },
+        "updated_at": {
+          "type": "string",
+          "format": "date-time",
+          "example": "2014-11-17T19:36:22+01:00"
+        },
+        "id": { "type": "integer", "format": "int32", "example": "85015" },
+        "starts_at": {
+          "type": "string",
+          "format": "date-time",
+          "example": "2014-11-16T00:00:00+01:00"
+        },
+        "ends_at": {
+          "type": "string",
+          "format": "date-time",
+          "example": "2014-11-23T23:59:59+01:00"
+        },
+        "processed_at": {
+          "type": "string",
+          "format": "date-time",
+          "example": "2014-11-17T19:36:22+01:00"
+        },
+        "paid": { "type": "boolean" },
+        "vacation": { "type": "boolean" },
+        "state": { "type": "string", "example": "approved" },
+        "include_weekends": { "type": "boolean" },
+        "comments_count": {
+          "type": "integer",
+          "format": "int32",
+          "example": "0"
+        },
+        "attachments_count": {
+          "type": "integer",
+          "format": "int32",
+          "example": "0"
+        },
+        "commentable": { "type": "boolean" },
+        "attachable": { "type": "boolean" },
+        "all_day": { "type": "boolean" },
+        "justification": { "type": "string", "example": "" },
+        "last_updated_by_id": {
+          "type": "integer",
+          "format": "int32",
+          "example": "493"
+        },
+        "adjusted_duration": {
+          "type": "integer",
+          "format": "int32",
+          "example": "691200"
+        },
+        "comment_ids": { "type": "array", "items": {} },
+        "attachment_ids": { "type": "array", "items": {} },
+        "applicant_id": {
+          "type": "integer",
+          "format": "int32",
+          "example": "493"
+        },
+        "handler_id": {
+          "type": "integer",
+          "format": "int32",
+          "example": "493"
+        },
+        "location_id": {
+          "type": "integer",
+          "format": "int32",
+          "example": "64"
+        },
+        "absence_type_id": {
+          "type": "integer",
+          "format": "int32",
+          "example": "1"
+        }
+      }
+    }
+  }
+}

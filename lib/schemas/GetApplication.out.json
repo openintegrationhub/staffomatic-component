@@ -1,0 +1,43 @@
+{
+  "type": "object",
+  "properties": {
+    "created_at": {
+      "type": "string",
+      "format": "date-time",
+      "example": "2014-12-01T17:30:25+01:00"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time",
+      "example": "2014-12-01T17:30:25+01:00"
+    },
+    "id": { "type": "integer", "format": "int32", "example": "3743340" },
+    "user_id": { "type": "integer", "format": "int32", "example": "493" },
+    "shift_id": { "type": "integer", "format": "int32", "example": "3068101" },
+    "schedule_id": { "type": "integer", "format": "int32", "example": "83959" },
+    "location_id": { "type": "integer", "format": "int32", "example": "64" },
+    "creator_id": { "type": "integer", "format": "int32", "example": "493" },
+    "state": { "type": "string", "example": "assigned" },
+    "shift_starts_at": {
+      "type": "string",
+      "format": "date-time",
+      "example": "2015-07-21T08:00:00+02:00"
+    },
+    "shift_ends_at": {
+      "type": "string",
+      "format": "date-time",
+      "example": "2015-07-21T16:00:00+02:00"
+    },
+    "department_id": {
+      "type": "integer",
+      "format": "int32",
+      "example": "39164"
+    },
+    "attended": { "type": "boolean" },
+    "attend_starts_at": { "type": "string", "format": "nullable" },
+    "attend_ends_at": { "type": "string", "format": "nullable" },
+    "intermission": { "type": "integer", "format": "int32", "example": "0" },
+    "cancel_reason": { "type": "string", "format": "nullable" },
+    "duration": { "type": "integer", "format": "int32", "example": "28800" }
+  }
+}

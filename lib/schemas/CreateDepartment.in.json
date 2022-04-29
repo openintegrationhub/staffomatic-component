@@ -1,0 +1,37 @@
+{
+  "properties": {
+    "requestBody": {
+      "type": "object",
+      "properties": {
+        "created_at": {
+          "type": "string",
+          "format": "date-time",
+          "example": "2014-11-04T12:21:54+01:00"
+        },
+        "updated_at": {
+          "type": "string",
+          "format": "date-time",
+          "example": "2014-11-13T15:07:09+01:00"
+        },
+        "id": { "type": "integer", "format": "int32", "example": "39164" },
+        "name": { "type": "string", "example": "asdasd" },
+        "color": { "type": "string", "example": "c4a5c8" },
+        "location_id": {
+          "type": "integer",
+          "format": "int32",
+          "example": "64"
+        },
+        "position": { "type": "string", "format": "nullable" },
+        "creator_id": {
+          "type": "integer",
+          "format": "int32",
+          "example": "493"
+        },
+        "user_ids": {
+          "type": "array",
+          "items": { "type": "integer", "format": "int32", "example": "493" }
+        }
+      }
+    }
+  }
+}

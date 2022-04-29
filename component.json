@@ -46,55 +46,402 @@
     }
   },
   "triggers": {
-    "getUsersPolling": {
-      "title": "Fetch new and updated persons (getPersons - Polling)",
-      "description": "Get Staffomatic persons which have recently been modified or created",
-      "type": "polling",
-      "main": "./lib/triggers/getUsersPolling.js",
-      "metadata": {
-        "out": "./lib/schemas/getUsers.out.json"
-      }
+    "lookup": {
+      "main": "./lib/lookups/lookup.js",
+      "title": "Function to run a lookup",
+      "description": "Function to call an internal trigger or action"
     },
-    "getEventsPolling": {
-      "title": "Fetch new and updated events (getEvents- Polling)",
-      "description": "Get Staffomatic organizations which have recently been modified or created",
-      "type": "polling",
-      "main": "./lib/triggers/getEventsPolling.js",
-      "metadata": {
-        "out": "./lib/schemas/getEvents.out.json"
-      }
+    "GetAbsenceTypes": {
+      "main": "./lib/triggers/trigger.js",
+      "title": "Get absence types",
+      "description": "Get absence types",
+      "callParams": { "pathName": "/locations/:locationId/absence_types", "method": "get" }
     },
-    "getAbsencePolling": {
-      "title": "Fetch new and updated absence (getAbsence- Polling)",
-      "description": "Get Staffomatic absences which have recently been modified or created",
-      "type": "polling",
-      "main": "./lib/triggers/getAbsencesPolling.js",
-      "metadata": {
-        "out": "./lib/schemas/getAbsences.out.json"
-      }
+    "GetAbsenceType": {
+      "main": "./lib/triggers/trigger.js",
+      "title": "Get absence type",
+      "description": "Get absence type",
+      "callParams": { "pathName": "/locations/:locationId/absence_types", "method": "get" }
+    },
+    "GetAbsences": {
+      "main": "./lib/triggers/trigger.js",
+      "title": "Get absences",
+      "description": "Get absences",
+      "callParams": { "pathName": "/locations/:locationId/absences", "method": "get" }
+    },
+    "GetAbsence": {
+      "main": "./lib/triggers/trigger.js",
+      "title": "Get absence",
+      "description": "Get absence",
+      "callParams": { "pathName": "/locations/:locationId/absences", "method": "get" }
+    },
+    "GetAccount": {
+      "main": "./lib/triggers/trigger.js",
+      "title": "Get account",
+      "description": "Get account",
+      "callParams": { "pathName": "/account", "method": "get" }
+    },
+    "GetApplications": {
+      "main": "./lib/triggers/trigger.js",
+      "title": "Get applications",
+      "description": "Get applications",
+      "callParams": { "pathName": "/shifts/:shiftId/applications", "method": "get" }
+    },
+    "GetApplication": {
+      "main": "./lib/triggers/trigger.js",
+      "title": "Get application",
+      "description": "Get application",
+      "callParams": { "pathName": "/shifts/3068101/applications/:applpicationId", "method": "get" }
+    },
+    "GetBreak_Timers": {
+      "main": "./lib/triggers/trigger.js",
+      "title": "Get break_timers",
+      "description": "Get break_timers",
+      "callParams": { "pathName": "/break_timers", "method": "get" }
+    },
+    "GetBreak_Timer": {
+      "main": "./lib/triggers/trigger.js",
+      "title": "Get break_timer",
+      "description": "Get break_timer",
+      "callParams": { "pathName": "/break_timers/:break_timerId", "method": "get" }
+    },
+    "GetDepartments": {
+      "main": "./lib/triggers/trigger.js",
+      "title": "Get departments",
+      "description": "Get departments",
+      "callParams": { "pathName": "/locations/:locationId/departments", "method": "get" }
+    },
+    "GetDepartment": {
+      "main": "./lib/triggers/trigger.js",
+      "title": "Get department",
+      "description": "Get department",
+      "callParams": { "pathName": "/locations/:locationId/departments/:departmentId", "method": "get" }
+    },
+    "GetEvents": {
+      "main": "./lib/triggers/trigger.js",
+      "title": "Get Events",
+      "description": "Get Events",
+      "callParams": { "pathName": "/events", "method": "get" }
+    },
+    "GetForm_Fields": {
+      "main": "./lib/triggers/trigger.js",
+      "title": "Get form_fields",
+      "description": "Get form_fields",
+      "callParams": { "pathName": "/users/:userId/form_fields", "method": "get" }
+    },
+    "GetForm_Field": {
+      "main": "./lib/triggers/trigger.js",
+      "title": "Get form_field",
+      "description": "Get form_field",
+      "callParams": { "pathName": "/users/:userId/form_fields/:form_fieldId", "method": "get" }
+    },
+    "GetLocations": {
+      "main": "./lib/triggers/trigger.js",
+      "title": "Get locations",
+      "description": "Get locations",
+      "callParams": { "pathName": "/locations", "method": "get" }
+    },
+    "GetLocation": {
+      "main": "./lib/triggers/trigger.js",
+      "title": "Get location",
+      "description": "Get location",
+      "callParams": { "pathName": "/locations/:locationId", "method": "get" }
+    },
+    "GetNewsItems": {
+      "main": "./lib/triggers/trigger.js",
+      "title": "Get news items",
+      "description": "Get news items",
+      "callParams": { "pathName": "/locations/:locationId/news_items", "method": "get" }
+    },
+    "GetNewsItem": {
+        "main": "./lib/triggers/trigger.js",
+        "title": "Get news items",
+        "description": "Get news items",
+        "callParams": { "pathName": "/locations/:locationId/news_items/:news_itemId", "method": "get" }
+    },
+    "GetSchedules": {
+      "main": "./lib/triggers/trigger.js",
+      "title": "Get schedules",
+      "description": "Get schedules",
+      "callParams": { "pathName": "/locations/:locationId/schedules", "method": "get" }
+    },
+    "GetSchedule": {
+      "main": "./lib/triggers/trigger.js",
+      "title": "Get schedule",
+      "description": "Get schedule",
+      "callParams": { "pathName": "/locations/:locationId/schedules/:scheduleId", "method": "get" }
+    },
+    "GetShifts": {
+      "main": "./lib/triggers/trigger.js",
+      "title": "Get shifts",
+      "description": "Get shifts",
+      "callParams": { "pathName": "/schedules/:scheduleId/shifts", "method": "get" }
+    },
+    "GetShift": {
+      "main": "./lib/triggers/trigger.js",
+      "title": "Get shift",
+      "description": "Get shift",
+      "callParams": { "pathName": "/schedules/:scheduleId/shifts/:shiftId", "method": "get" }
+    },
+    "GetSpecialDays": {
+        "main": "./lib/triggers/trigger.js",
+        "title": "Get special days",
+        "description": "Get special days",
+        "callParams": { "pathName": "/locations/:locationId/special_days", "method": "get" }
+    },
+    "GetSpecialDay": {
+      "main": "./lib/triggers/trigger.js",
+      "title": "Get special day",
+      "description": "Get special day",
+      "callParams": { "pathName": "/locations/:locationId/special_days/:special_dayId", "method": "get" }
+    },
+    "GetUsers": {
+      "main": "./lib/triggers/trigger.js",
+      "title": "Get users",
+      "description": "Get users",
+      "callParams": { "pathName": "/locations/:locationId/users", "method": "get" }
+    },
+    "GetUser": {
+      "main": "./lib/triggers/trigger.js",
+      "title": "Get user",
+      "description": "Get user",
+      "callParams": { "pathName": "/locations/:locationId/users/:userId", "method": "get" }
+    },
+    "GetWork_Timers": {
+      "main": "./lib/triggers/trigger.js",
+      "title": "Get work_timers",
+      "description": "Get work_timers",
+      "callParams": { "pathName": "/work_timers", "method": "get" }
+    },
+    "GetWork_Timer": {
+      "main": "./lib/triggers/trigger.js",
+      "title": "Get work_timer",
+      "description": "Get work_timer",
+      "callParams": { "pathName": "/work_timers/:work_timersId", "method": "get" }
     }
   },
   "actions": {
-    "createUser": {
-      "title": "Create a user in Staffomatic",
-      "main": "./lib/actions/createUser.js",
-      "metadata": {
-        "in": "./lib/schemas/createUser.in.json"
-      }
+    "CreateAbsenceType": {
+      "main": "./lib/actions/action.js",
+      "title": "Create absence type",
+      "description": "Create absence type",
+      "callParams": { "pathName": "/locations/:locationId/absence_types", "method": "post" }
     },
-    "createEvent": {
-      "title": "Create an event in Staffomatic",
-      "main": "./lib/actions/createEvent.js",
-      "metadata": {
-        "in": "./lib/schemas/createEvent.in.json"
-      }
+    "UpdateAbsenceType": {
+      "main": "./lib/actions/action.js",
+      "title": "Update absence type",
+      "description": "Update absence type",
+      "callParams": { "pathName": "/locations/:locationId/absence_types", "method": "put" }
     },
-    "createAbsence": {
-      "title": "Create an absence in Staffomatic",
-      "main": "./lib/actions/createAbsence.js",
-      "metadata": {
-        "in": "./lib/schemas/createAbsence.in.json"
-      }
+    "DeleteAbsenceType": {
+      "main": "./lib/actions/action.js",
+      "title": "Delete absence type",
+      "description": "Delete absence type",
+      "callParams": { "pathName": "/locations/:locationId/absence_types", "method": "delete" }
+    },
+    "CreateAbsence": {
+      "main": "./lib/actions/action.js",
+      "title": "Create absence",
+      "description": "Create absence",
+      "callParams": { "pathName": "/locations/:locationId/absences", "method": "post" }
+    },
+    "UpdateAbsence": {
+      "main": "./lib/actions/action.js",
+      "title": "Update absence",
+      "description": "Update absence",
+      "callParams": { "pathName": "/locations/:locationId/absences/:absenceId", "method": "put" }
+    },
+    "DeleteAbsence": {
+      "main": "./lib/actions/action.js",
+      "title": "Delete absence",
+      "description": "Delete absence",
+      "callParams": { "pathName": "/locations/:locationId/absences/:absenceId", "method": "delete" }
+    },
+    "CreateApplication": {
+      "main": "./lib/actions/action.js",
+      "title": "Create application",
+      "description": "Create application",
+      "callParams": { "pathName": "/shifts/:shiftId/applications", "method": "post" }
+    },
+    "UpdateApplications": {
+      "main": "./lib/actions/action.js",
+      "title": "Update applications",
+      "description": "Update applications",
+      "callParams": { "pathName": "/shifts/:shiftId/applications/:applicationId", "method": "put" }
+    },
+    "DeleteApplications": {
+      "main": "./lib/actions/action.js",
+      "title": "Delete applications",
+      "description": "Delete applications",
+      "callParams": { "pathName": "/shifts/:shiftId/applications/:applicationId", "method": "delete" }
+    },
+    "CreateBreak_Timer": {
+      "main": "./lib/actions/action.js",
+      "title": "Create break_timer",
+      "description": "Create break_timer",
+      "callParams": { "pathName": "/break_timers", "method": "post" }
+    },
+    "UpdateBreak_Timer": {
+      "main": "./lib/actions/action.js",
+      "title": "Update break_timer",
+      "description": "Update break_timer",
+      "callParams": { "pathName": "/break_timers/:break_timerId", "method": "put" }
+    },
+    "DeleteBreak_Timer": {
+      "main": "./lib/actions/action.js",
+      "title": "Delete break_timer",
+      "description": "Delete break_timer",
+      "callParams": { "pathName": "/break_timers/:break_timerId", "method": "delete" }
+    },
+    "CreateDepartment": {
+      "main": "./lib/actions/action.js",
+      "title": "Create department",
+      "description": "Create department",
+      "callParams": { "pathName": "/locations/:locationId/departments", "method": "post" }
+    },
+    "UpdateDepartment": {
+      "main": "./lib/actions/action.js",
+      "title": "Update department",
+      "description": "Update department",
+      "callParams": { "pathName": "/locations/:locationId/departments/:departmentId", "method": "put" }
+    },
+    "DeleteDepartment": {
+      "main": "./lib/actions/action.js",
+      "title": "Delete department",
+      "description": "Delete department",
+      "callParams": { "pathName": "/locations/:locationId/departments/:departmentId", "method": "delete" }
+    },
+    "UpdateForm_Field": {
+      "main": "./lib/actions/action.js",
+      "title": "Update form_field",
+      "description": "Update form_field",
+      "callParams": { "pathName": "/users/:userId/form_fields/:form_fieldId", "method": "put" }
+    },
+    "CreateLocation": {
+      "main": "./lib/actions/action.js",
+      "title": "Create location",
+      "description": "Create location",
+      "callParams": { "pathName": "/locations", "method": "post" }
+    },
+    "UpdateLocation": {
+      "main": "./lib/actions/action.js",
+      "title": "Update location",
+      "description": "Update location",
+      "callParams": { "pathName": "/locations/:locationId", "method": "put" }
+    },
+    "DeleteLocation": {
+      "main": "./lib/actions/action.js",
+      "title": "Delete location",
+      "description": "Delete location",
+      "callParams": { "pathName": "/locations/:locationId", "method": "delete" }
+    },
+    "CreateNewsItems": {
+        "main": "./lib/actions/action.js",
+        "title": "Create news item",
+        "description": "Create news item",
+        "callParams": { "pathName": "/locations/:locationId/news_items", "method": "post" }
+    },
+    "UpdateNewsItems": {
+        "main": "./lib/actions/action.js",
+        "title": "Update news item",
+        "description": "Update news item",
+        "callParams": { "pathName": "/locations/:locationId/news_items/:news_itemId", "method": "put" }
+    },
+    "DeleteNewsItems": {
+        "main": "./lib/actions/action.js",
+        "title": "Delete news item",
+        "description": "Delete news item",
+        "callParams": { "pathName": "/locations/:locationId/news_items/:news_itemId", "method": "delete" }
+    },
+    "CreateSchedule": {
+      "main": "./lib/actions/action.js",
+      "title": "Create schedule",
+      "description": "Create schedule",
+      "callParams": { "pathName": "/locations/:locationId/schedules", "method": "post" }
+    },
+    "UpdateSchedule": {
+      "main": "./lib/actions/action.js",
+      "title": "Update schedule",
+      "description": "Update schedule",
+      "callParams": { "pathName": "/locations/:locationId/schedules/:scheduleId", "method": "put" }
+    },
+    "DeleteSchedule": {
+      "main": "./lib/actions/action.js",
+      "title": "Delete schedule",
+      "description": "Delete schedule",
+      "callParams": { "pathName": "/locations/:locationId/schedules/:scheduleId", "method": "delete" }
+    },
+    "CreateShift": {
+      "main": "./lib/actions/action.js",
+      "title": "Create shift",
+      "description": "Create shift",
+      "callParams": { "pathName": "/schedules/:scheduleId/shifts", "method": "post" }
+    },
+    "UpdateShift": {
+      "main": "./lib/actions/action.js",
+      "title": "Update shift",
+      "description": "Update shift",
+      "callParams": { "pathName": "/schedules/:scheduleId/shifts/:shiftId", "method": "put" }
+    },
+    "DeleteShift": {
+      "main": "./lib/actions/action.js",
+      "title": "Delete shift",
+      "description": "Delete shift",
+      "callParams": { "pathName": "/schedules/:scheduleId/shifts/:shiftId", "method": "delete" }
+    },
+    "CreateSpecialDay": {
+      "main": "./lib/actions/action.js",
+      "title": "Create special day",
+      "description": "Create special day",
+      "callParams": { "pathName": "/locations/:locationId/special_days", "method": "post" }
+    },
+    "UpdateSpecialDay": {
+      "main": "./lib/actions/action.js",
+      "title": "Update special day",
+      "description": "Update special day",
+      "callParams": { "pathName": "/locations/:locationId/special_days/:special_dayId", "method": "put" }
+    },
+    "DeleteSpecialDay": {
+      "main": "./lib/actions/action.js",
+      "title": "Delete special day",
+      "description": "Delete special day",
+      "callParams": { "pathName": "/locations/:locationId/special_days/:special_dayId", "method": "delete" }
+    },
+    "CreateUser": {
+      "main": "./lib/actions/action.js",
+      "title": "Create user",
+      "description": "Create user",
+      "callParams": { "pathName": "/locations/:locationId/users", "method": "post" }
+    },
+    "UpdateUser": {
+      "main": "./lib/actions/action.js",
+      "title": "Update user",
+      "description": "Update user",
+      "callParams": { "pathName": "/locations/:locationId/users/:userId", "method": "put" }
+    },
+    "DeleteUser": {
+      "main": "./lib/actions/action.js",
+      "title": "Delete user",
+      "description": "Delete user",
+      "callParams": { "pathName": "/locations/:locationId/users/:userId", "method": "delete" }
+    },
+    "CreateWork_Timer": {
+      "main": "./lib/actions/action.js",
+      "title": "Create work_timer",
+      "description": "Create work_timer",
+      "callParams": { "pathName": "/work_timers", "method": "post" }
+    },
+    "UpdateWork_Timer": {
+      "main": "./lib/actions/action.js",
+      "title": "Update work_timer",
+      "description": "Update work_timer",
+      "callParams": { "pathName": "/work_timers/:work_timersId", "method": "put" }
+    },
+    "DeleteWork_Timer": {
+      "main": "./lib/actions/action.js",
+      "title": "Delete work_timer",
+      "description": "Delete work_timer",
+      "callParams": { "pathName": "/work_timers/:work_timersId", "method": "delete" }
     }
   }
 }

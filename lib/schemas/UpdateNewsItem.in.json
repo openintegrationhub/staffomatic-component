@@ -1,0 +1,13 @@
+{
+  "properties": {
+    "requestBody": {
+      "type": "object",
+      "properties": {
+        "user_ids": {
+          "type": "array",
+          "items": { "type": "string", "example": "493" }
+        }
+      }
+    }
+  }
+}

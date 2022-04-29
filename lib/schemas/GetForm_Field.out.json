@@ -1,0 +1,21 @@
+{
+  "type": "object",
+  "properties": {
+    "created_at": {
+      "type": "string",
+      "format": "date-time",
+      "example": "2014-10-07T11:02:51+02:00"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time",
+      "example": "2015-02-10T15:21:54+01:00"
+    },
+    "id": { "type": "integer", "format": "int32", "example": "149328" },
+    "field_type": { "type": "string", "example": "string" },
+    "name": { "type": "string", "example": "fun factor" },
+    "field_options": { "type": "array", "items": {} },
+    "value": { "type": "string", "example": "100%" },
+    "position": { "type": "string", "format": "nullable" }
+  }
+}
