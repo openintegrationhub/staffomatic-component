@@ -1,49 +1,56 @@
 {
   "properties": {
     "requestBody": {
-      "created_at": {
-        "type": "string",
-        "format": "date-time",
-        "example": "2015-02-17T17:58:45+01:00"
-      },
-      "updated_at": {
-        "type": "string",
-        "format": "date-time",
-        "example": "2015-02-17T18:02:01+01:00"
-      },
-      "id": { "type": "integer", "format": "int32", "example": "3997004" },
-      "desired_coverage": {
-        "type": "integer",
-        "format": "int32",
-        "example": "1"
-      },
-      "note": { "type": "string", "example": "" },
-      "open_end": { "type": "boolean" },
-      "full": { "type": "boolean" },
-      "location_id": { "type": "integer", "format": "int32", "example": "64" },
-      "department_id": {
-        "type": "integer",
-        "format": "int32",
-        "example": "47280"
-      },
-      "ends_at": {
-        "type": "string",
-        "format": "date-time",
-        "example": "2015-02-16T16:00:00+01:00"
-      },
-      "starts_at": {
-        "type": "string",
-        "format": "date-time",
-        "example": "2015-02-16T08:00:00+01:00"
-      },
-      "schedule_id": {
-        "type": "integer",
-        "format": "int32",
-        "example": "107739"
-      },
-      "applied_user_ids": { "type": "array", "items": {} },
-      "assigned_user_ids": { "type": "array", "items": {} },
-      "cancelled_user_ids": { "type": "array", "items": {} }
+      "type": "object",
+      "properties": {
+        "created_at": {
+          "type": "string",
+          "format": "date-time",
+          "example": "2015-02-17T17:58:45+01:00"
+        },
+        "updated_at": {
+          "type": "string",
+          "format": "date-time",
+          "example": "2015-02-17T18:02:01+01:00"
+        },
+        "id": { "type": "integer", "format": "int32", "example": "3997004" },
+        "desired_coverage": {
+          "type": "integer",
+          "format": "int32",
+          "example": "1"
+        },
+        "note": { "type": "string", "example": "" },
+        "open_end": { "type": "boolean" },
+        "full": { "type": "boolean" },
+        "location_id": {
+          "type": "integer",
+          "format": "int32",
+          "example": "64"
+        },
+        "department_id": {
+          "type": "integer",
+          "format": "int32",
+          "example": "47280"
+        },
+        "ends_at": {
+          "type": "string",
+          "format": "date-time",
+          "example": "2015-02-16T16:00:00+01:00"
+        },
+        "starts_at": {
+          "type": "string",
+          "format": "date-time",
+          "example": "2015-02-16T08:00:00+01:00"
+        },
+        "schedule_id": {
+          "type": "integer",
+          "format": "int32",
+          "example": "107739"
+        },
+        "applied_user_ids": { "type": "array", "items": {} },
+        "assigned_user_ids": { "type": "array", "items": {} },
+        "cancelled_user_ids": { "type": "array", "items": {} }
+      }
     }
   }
 }

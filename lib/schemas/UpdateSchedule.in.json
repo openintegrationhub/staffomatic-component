@@ -1,58 +1,73 @@
 {
   "properties": {
     "requestBody": {
-      "created_at": {
-        "type": "string",
-        "format": "date-time",
-        "example": "2012-03-13T12:20:13+01:00"
-      },
-      "updated_at": {
-        "type": "string",
-        "format": "date-time",
-        "example": "2013-07-16T00:56:16+02:00"
-      },
-      "id": { "type": "integer", "format": "int32", "example": "1699" },
-      "creator_id": { "type": "integer", "format": "int32", "example": "493" },
-      "schedule_id": { "type": "integer", "format": "int32", "example": "118" },
-      "state": { "type": "string", "example": "draft" },
-      "template": { "type": "string", "format": "nullable" },
-      "bop": { "type": "string", "format": "date", "example": "2012-02-20" },
-      "eop": { "type": "string", "format": "date", "example": "2012-02-26" },
-      "deadline": {
-        "type": "string",
-        "format": "date-time",
-        "example": "2012-02-16T00:00:00+01:00"
-      },
-      "coverage_percentage": {
-        "type": "integer",
-        "format": "int32",
-        "example": "0"
-      },
-      "schedule_changes_count": {
-        "type": "integer",
-        "format": "int32",
-        "example": "0"
-      },
-      "first_day_of_week": {
-        "type": "integer",
-        "format": "int32",
-        "example": "1"
-      },
-      "slot_minutes": { "type": "integer", "format": "int32", "example": "30" },
-      "min_time": { "type": "integer", "format": "int32", "example": "0" },
-      "max_time": { "type": "integer", "format": "int32", "example": "24" },
-      "default_view": { "type": "string", "example": "agendaWeek" },
-      "default_event_minutes": {
-        "type": "integer",
-        "format": "int32",
-        "example": "240"
-      },
-      "show_event_header": { "type": "boolean" },
-      "applications_visible": { "type": "boolean" },
-      "assignments_visible": { "type": "boolean" },
-      "swap_shifts": { "type": "boolean" },
-      "notes_visible": { "type": "boolean" },
-      "allow_self_assign": { "type": "boolean" }
+      "type": "object",
+      "properties": {
+        "created_at": {
+          "type": "string",
+          "format": "date-time",
+          "example": "2012-03-13T12:20:13+01:00"
+        },
+        "updated_at": {
+          "type": "string",
+          "format": "date-time",
+          "example": "2013-07-16T00:56:16+02:00"
+        },
+        "id": { "type": "integer", "format": "int32", "example": "1699" },
+        "creator_id": {
+          "type": "integer",
+          "format": "int32",
+          "example": "493"
+        },
+        "schedule_id": {
+          "type": "integer",
+          "format": "int32",
+          "example": "118"
+        },
+        "state": { "type": "string", "example": "draft" },
+        "template": { "type": "string", "format": "nullable" },
+        "bop": { "type": "string", "format": "date", "example": "2012-02-20" },
+        "eop": { "type": "string", "format": "date", "example": "2012-02-26" },
+        "deadline": {
+          "type": "string",
+          "format": "date-time",
+          "example": "2012-02-16T00:00:00+01:00"
+        },
+        "coverage_percentage": {
+          "type": "integer",
+          "format": "int32",
+          "example": "0"
+        },
+        "schedule_changes_count": {
+          "type": "integer",
+          "format": "int32",
+          "example": "0"
+        },
+        "first_day_of_week": {
+          "type": "integer",
+          "format": "int32",
+          "example": "1"
+        },
+        "slot_minutes": {
+          "type": "integer",
+          "format": "int32",
+          "example": "30"
+        },
+        "min_time": { "type": "integer", "format": "int32", "example": "0" },
+        "max_time": { "type": "integer", "format": "int32", "example": "24" },
+        "default_view": { "type": "string", "example": "agendaWeek" },
+        "default_event_minutes": {
+          "type": "integer",
+          "format": "int32",
+          "example": "240"
+        },
+        "show_event_header": { "type": "boolean" },
+        "applications_visible": { "type": "boolean" },
+        "assignments_visible": { "type": "boolean" },
+        "swap_shifts": { "type": "boolean" },
+        "notes_visible": { "type": "boolean" },
+        "allow_self_assign": { "type": "boolean" }
+      }
     }
   }
 }

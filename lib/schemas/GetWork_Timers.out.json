@@ -1,51 +1,61 @@
 {
-  "type": "array",
-  "items": {
-    "type": "object",
-    "properties": {
-      "created_at": {
-        "type": "string",
-        "format": "date-time",
-        "example": "2018-08-06T13:13:21+02:00"
-      },
-      "updated_at": {
-        "type": "string",
-        "format": "date-time",
-        "example": "2018-08-06T13:14:57+02:00"
-      },
-      "id": { "type": "integer", "format": "int32", "example": "31231" },
-      "user_id": { "type": "integer", "format": "int32", "example": "1" },
-      "location_id": { "type": "string", "format": "nullable" },
-      "updated_by_id": { "type": "integer", "format": "int32", "example": "1" },
-      "created_by_id": { "type": "integer", "format": "int32", "example": "1" },
-      "state": { "type": "string", "example": "running" },
-      "duration": { "type": "integer", "format": "int32", "example": "0" },
-      "break_duration": {
-        "type": "integer",
-        "format": "int32",
-        "example": "100"
-      },
-      "net_duration": {
-        "type": "integer",
-        "format": "int32",
-        "example": "100"
-      },
-      "starts_at": {
-        "type": "string",
-        "format": "date-time",
-        "example": "2018-08-06T13:15:00+02:00"
-      },
-      "ends_at": { "type": "string", "format": "nullable" },
-      "application_starts_at": { "type": "string", "format": "nullable" },
-      "application_ends_at": { "type": "string", "format": "nullable" },
-      "application_intermission": { "type": "string", "format": "nullable" },
-      "work_report_id": {
-        "type": "integer",
-        "format": "int32",
-        "example": "30077"
-      },
-      "application_id": { "type": "string", "format": "nullable" },
-      "device_type": { "type": "string", "example": "terminal" }
+  "properties": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "created_at": {
+          "type": "string",
+          "format": "date-time",
+          "example": "2018-08-06T13:13:21+02:00"
+        },
+        "updated_at": {
+          "type": "string",
+          "format": "date-time",
+          "example": "2018-08-06T13:14:57+02:00"
+        },
+        "id": { "type": "integer", "format": "int32", "example": "31231" },
+        "user_id": { "type": "integer", "format": "int32", "example": "1" },
+        "location_id": { "type": "string", "format": "nullable" },
+        "updated_by_id": {
+          "type": "integer",
+          "format": "int32",
+          "example": "1"
+        },
+        "created_by_id": {
+          "type": "integer",
+          "format": "int32",
+          "example": "1"
+        },
+        "state": { "type": "string", "example": "running" },
+        "duration": { "type": "integer", "format": "int32", "example": "0" },
+        "break_duration": {
+          "type": "integer",
+          "format": "int32",
+          "example": "100"
+        },
+        "net_duration": {
+          "type": "integer",
+          "format": "int32",
+          "example": "100"
+        },
+        "starts_at": {
+          "type": "string",
+          "format": "date-time",
+          "example": "2018-08-06T13:15:00+02:00"
+        },
+        "ends_at": { "type": "string", "format": "nullable" },
+        "application_starts_at": { "type": "string", "format": "nullable" },
+        "application_ends_at": { "type": "string", "format": "nullable" },
+        "application_intermission": { "type": "string", "format": "nullable" },
+        "work_report_id": {
+          "type": "integer",
+          "format": "int32",
+          "example": "30077"
+        },
+        "application_id": { "type": "string", "format": "nullable" },
+        "device_type": { "type": "string", "example": "terminal" }
+      }
     }
   }
 }

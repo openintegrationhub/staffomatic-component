@@ -1,55 +1,62 @@
 {
   "properties": {
     "requestBody": {
-      "created_at": {
-        "type": "string",
-        "format": "date-time",
-        "example": "2011-11-21T11:49:28+01:00"
-      },
-      "updated_at": {
-        "type": "string",
-        "format": "date-time",
-        "example": "2014-11-28T15:14:07+01:00"
-      },
-      "id": { "type": "integer", "format": "int32", "example": "64" },
-      "name": { "type": "string", "example": "Mein Cafe!" },
-      "logo": {
-        "type": "string",
-        "example": "https://api.staffomaticapp.com/system/logos/64/api/1525596_227297620727879_2100097242_n.png?1413354842"
-      },
-      "first_day_of_week": {
-        "type": "integer",
-        "format": "int32",
-        "example": "1"
-      },
-      "slot_minutes": { "type": "integer", "format": "int32", "example": "45" },
-      "min_time": { "type": "integer", "format": "int32", "example": "0" },
-      "max_time": { "type": "integer", "format": "int32", "example": "24" },
-      "default_view": { "type": "string", "example": "list_week" },
-      "default_event_minutes": {
-        "type": "integer",
-        "format": "int32",
-        "example": "240"
-      },
-      "show_event_header": { "type": "boolean" },
-      "applications_visible": { "type": "boolean" },
-      "assignments_visible": { "type": "boolean" },
-      "allow_self_assign": { "type": "boolean" },
-      "swap_shifts": { "type": "boolean" },
-      "manners_address": { "type": "string", "example": "last_name" },
-      "users_sort_by": { "type": "string", "example": "working_hours" },
-      "notes_visible": { "type": "boolean" },
-      "active_users_count": {
-        "type": "integer",
-        "format": "int32",
-        "example": "12"
-      },
-      "department_count": {
-        "type": "integer",
-        "format": "int32",
-        "example": "10"
-      },
-      "user_ids": { "type": "array", "items": {} }
+      "type": "object",
+      "properties": {
+        "created_at": {
+          "type": "string",
+          "format": "date-time",
+          "example": "2011-11-21T11:49:28+01:00"
+        },
+        "updated_at": {
+          "type": "string",
+          "format": "date-time",
+          "example": "2014-11-28T15:14:07+01:00"
+        },
+        "id": { "type": "integer", "format": "int32", "example": "64" },
+        "name": { "type": "string", "example": "Mein Cafe!" },
+        "logo": {
+          "type": "string",
+          "example": "https://api.staffomaticapp.com/system/logos/64/api/1525596_227297620727879_2100097242_n.png?1413354842"
+        },
+        "first_day_of_week": {
+          "type": "integer",
+          "format": "int32",
+          "example": "1"
+        },
+        "slot_minutes": {
+          "type": "integer",
+          "format": "int32",
+          "example": "45"
+        },
+        "min_time": { "type": "integer", "format": "int32", "example": "0" },
+        "max_time": { "type": "integer", "format": "int32", "example": "24" },
+        "default_view": { "type": "string", "example": "list_week" },
+        "default_event_minutes": {
+          "type": "integer",
+          "format": "int32",
+          "example": "240"
+        },
+        "show_event_header": { "type": "boolean" },
+        "applications_visible": { "type": "boolean" },
+        "assignments_visible": { "type": "boolean" },
+        "allow_self_assign": { "type": "boolean" },
+        "swap_shifts": { "type": "boolean" },
+        "manners_address": { "type": "string", "example": "last_name" },
+        "users_sort_by": { "type": "string", "example": "working_hours" },
+        "notes_visible": { "type": "boolean" },
+        "active_users_count": {
+          "type": "integer",
+          "format": "int32",
+          "example": "12"
+        },
+        "department_count": {
+          "type": "integer",
+          "format": "int32",
+          "example": "10"
+        },
+        "user_ids": { "type": "array", "items": {} }
+      }
     }
   }
 }

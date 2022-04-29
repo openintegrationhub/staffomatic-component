@@ -1,37 +1,39 @@
 {
-  "type": "array",
-  "items": {
-    "type": "object",
-    "properties": {
-      "created_at": {
-        "type": "string",
-        "format": "date-time",
-        "example": "2018-02-03T18:23:58+02:00"
-      },
-      "updated_at": {
-        "type": "string",
-        "format": "date-time",
-        "example": "2018-02-03T18:23:58+02:00"
-      },
-      "id": { "type": "integer", "format": "int32", "example": "21312" },
-      "eventable_id": {
-        "type": "integer",
-        "format": "int32",
-        "example": "12321"
-      },
-      "eventable_type": { "type": "string", "example": "User" },
-      "type": { "type": "string", "example": "user_created_event" },
-      "creator_id": {
-        "type": "integer",
-        "format": "int32",
-        "example": "12321"
-      },
-      "description": {
-        "type": "string",
-        "example": "<strong class='creator'>Daniel Düsentrieb</strong> created the user <strong class='eventable-type'>Marvin@example.com</strong>"
-      },
-      "changes": { "type": "object", "properties": {} },
-      "location_id": { "type": "string", "format": "nullable" }
+  "properties": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "created_at": {
+          "type": "string",
+          "format": "date-time",
+          "example": "2018-02-03T18:23:58+02:00"
+        },
+        "updated_at": {
+          "type": "string",
+          "format": "date-time",
+          "example": "2018-02-03T18:23:58+02:00"
+        },
+        "id": { "type": "integer", "format": "int32", "example": "21312" },
+        "eventable_id": {
+          "type": "integer",
+          "format": "int32",
+          "example": "12321"
+        },
+        "eventable_type": { "type": "string", "example": "User" },
+        "type": { "type": "string", "example": "user_created_event" },
+        "creator_id": {
+          "type": "integer",
+          "format": "int32",
+          "example": "12321"
+        },
+        "description": {
+          "type": "string",
+          "example": "<strong class='creator'>Daniel Düsentrieb</strong> created the user <strong class='eventable-type'>Marvin@example.com</strong>"
+        },
+        "changes": { "type": "object", "properties": {} },
+        "location_id": { "type": "string", "format": "nullable" }
+      }
     }
   }
 }
