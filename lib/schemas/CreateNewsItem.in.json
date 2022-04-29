@@ -1,8 +1,15 @@
 {
-  "title": "Lorem ipsum dolor sit amet",
-  "body": "consectetur adipisicing elit.",
-  "send_to_all_locations": false,
-  "user_ids": ["791", "493"],
-  "commentable": true,
-  "attachable": true
+  "properties": {
+    "requestBody": {
+      "title": { "type": "string", "example": "Lorem ipsum dolor sit amet" },
+      "body": { "type": "string", "example": "consectetur adipisicing elit." },
+      "send_to_all_locations": { "type": "boolean" },
+      "user_ids": {
+        "type": "array",
+        "items": { "type": "string", "example": "791" }
+      },
+      "commentable": { "type": "boolean" },
+      "attachable": { "type": "boolean" }
+    }
+  }
 }

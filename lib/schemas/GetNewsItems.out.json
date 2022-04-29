@@ -1,22 +1,52 @@
 {
-  "properties": [
-    {
-      "created_at": "2014-11-24T22:41:57+01:00",
-      "updated_at": "2014-11-24T23:06:58+01:00",
-      "id": 14013,
-      "title": "corrupti facere a sed. Provident, sequi.",
-      "body": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus dicta fugit corporis doloremque maxime soluta dolorum ex, reprehenderit itaque, recusandae blanditiis debitis saepe distinctio, corrupti facere a sed. Provident, sequi.</p> ",
-      "author_id": 493,
-      "department_id": null,
-      "location_id": 64,
-      "attachment_url": "https://api.staffomaticapp.com/attachments/original/missing.png",
-      "attachment_name": null,
-      "send_to_all_locations": false,
-      "user_ids": [791],
-      "comments_count": 12,
-      "attachments_count": 12,
-      "commentable": true,
-      "attachable": true
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "created_at": {
+        "type": "string",
+        "format": "date-time",
+        "example": "2014-11-24T22:41:57+01:00"
+      },
+      "updated_at": {
+        "type": "string",
+        "format": "date-time",
+        "example": "2014-11-24T23:06:58+01:00"
+      },
+      "id": { "type": "integer", "format": "int32", "example": "14013" },
+      "title": {
+        "type": "string",
+        "example": "corrupti facere a sed. Provident, sequi."
+      },
+      "body": {
+        "type": "string",
+        "example": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus dicta fugit corporis doloremque maxime soluta dolorum ex, reprehenderit itaque, recusandae blanditiis debitis saepe distinctio, corrupti facere a sed. Provident, sequi.</p> "
+      },
+      "author_id": { "type": "integer", "format": "int32", "example": "493" },
+      "department_id": { "type": "string", "format": "nullable" },
+      "location_id": { "type": "integer", "format": "int32", "example": "64" },
+      "attachment_url": {
+        "type": "string",
+        "example": "https://api.staffomaticapp.com/attachments/original/missing.png"
+      },
+      "attachment_name": { "type": "string", "format": "nullable" },
+      "send_to_all_locations": { "type": "boolean" },
+      "user_ids": {
+        "type": "array",
+        "items": { "type": "integer", "format": "int32", "example": "791" }
+      },
+      "comments_count": {
+        "type": "integer",
+        "format": "int32",
+        "example": "12"
+      },
+      "attachments_count": {
+        "type": "integer",
+        "format": "int32",
+        "example": "12"
+      },
+      "commentable": { "type": "boolean" },
+      "attachable": { "type": "boolean" }
     }
-  ]
+  }
 }

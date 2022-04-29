@@ -1,33 +1,64 @@
 {
+  "type": "object",
   "properties": {
-    "created_at": "2011-11-10T15:10:13+01:00",
-    "updated_at": "2014-12-01T20:50:33+01:00",
-    "id": 493,
-    "email": "admin@staffomatic.com",
-    "first_name": "Admin",
-    "last_name": "Staffomatic",
-    "locale": "de",
-    "role": "admin",
-    "image": "https://api.staffomaticapp.com/assets/images/missing/user.png",
-    "phone_number_mobile": "017865646362",
-    "phone_number_office": "04056788456",
-    "company": "STAFFOMATIC",
-    "street": "Funhofweg 23",
-    "additional_street": "bei Lange",
-    "zip": "20234",
-    "city": "Hamburg",
-    "country": "",
-    "max_vacation_days": 26,
-    "comments_count": 2,
-    "attachments_count": 2,
-    "commentable": true,
-    "attachable": true,
-    "approved_absences_hours": 192,
-    "max_hours_per_month": 20,
-    "department_ids": [39166],
-    "locked_at": null,
-    "invited_by_id": null,
-    "invitation_state": "accepted",
-    "custom_id": "some-uniq-id"
+    "created_at": {
+      "type": "string",
+      "format": "date-time",
+      "example": "2011-11-10T15:10:13+01:00"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time",
+      "example": "2014-12-01T20:50:33+01:00"
+    },
+    "id": { "type": "integer", "format": "int32", "example": "493" },
+    "email": { "type": "string", "example": "admin@staffomatic.com" },
+    "first_name": { "type": "string", "example": "Admin" },
+    "last_name": { "type": "string", "example": "Staffomatic" },
+    "locale": { "type": "string", "example": "de" },
+    "role": { "type": "string", "example": "admin" },
+    "image": {
+      "type": "string",
+      "example": "https://api.staffomaticapp.com/assets/images/missing/user.png"
+    },
+    "phone_number_mobile": { "type": "string", "example": "017865646362" },
+    "phone_number_office": { "type": "string", "example": "04056788456" },
+    "company": { "type": "string", "example": "STAFFOMATIC" },
+    "street": { "type": "string", "example": "Funhofweg 23" },
+    "additional_street": { "type": "string", "example": "bei Lange" },
+    "zip": { "type": "string", "example": "20234" },
+    "city": { "type": "string", "example": "Hamburg" },
+    "country": { "type": "string", "example": "" },
+    "max_vacation_days": {
+      "type": "integer",
+      "format": "int32",
+      "example": "26"
+    },
+    "comments_count": { "type": "integer", "format": "int32", "example": "2" },
+    "attachments_count": {
+      "type": "integer",
+      "format": "int32",
+      "example": "2"
+    },
+    "commentable": { "type": "boolean" },
+    "attachable": { "type": "boolean" },
+    "approved_absences_hours": {
+      "type": "integer",
+      "format": "int32",
+      "example": "192"
+    },
+    "max_hours_per_month": {
+      "type": "integer",
+      "format": "int32",
+      "example": "20"
+    },
+    "department_ids": {
+      "type": "array",
+      "items": { "type": "integer", "format": "int32", "example": "39166" }
+    },
+    "locked_at": { "type": "string", "format": "nullable" },
+    "invited_by_id": { "type": "string", "format": "nullable" },
+    "invitation_state": { "type": "string", "example": "accepted" },
+    "custom_id": { "type": "string", "example": "some-uniq-id" }
   }
 }
